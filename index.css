@@ -93,9 +93,15 @@ label{
   border-radius: 8px;
   outline: none;
   border: 1px solid #c4c4c4;
-  padding: 0 3px;
+  padding: 0 6px;
+  margin-bottom: 10px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     
+}
+.error{
+  color: #c4c4c4;
+  font-size: 9px;
+  margin-top: -5px;
 }
 .input1{
     display: flex;
