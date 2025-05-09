@@ -78,14 +78,34 @@ cardnumber.addEventListener('input', () => {
 });
 
 main.addEventListener('submit', (e) => {
-  e.preventDefault(); 
+  e.preventDefault();
 
   detect(cardholder, 0, "it can't be blank");
   detect(cardnumber, 1, "it can't be blank");
   detect(month, 2, "it can't be blank");
   detect(year, 3, "it can't be blank");
   detect(cvc, 4, "it can't be blank");
+
+  const cardValue = cardnumber.value.replace(/\s/g, '');
+  const monthValue = month.value;
+  const yearValue = year.value;
+
+  if (!isValidCardNumber(cardValue)) {
+    errormsg[1].textContent = "Card number must be 16 digits";
+    cardnumber.style.border = "1px solid red";
+  }
+
+  if (!isValidMonth(monthValue)) {
+    errormsg[2].textContent = "Invalid month (01–12)";
+    month.style.border = "1px solid red";
+  }
+
+  if (!isValidYear(yearValue)) {
+    errormsg[3].textContent = "Invalid year";
+    year.style.border = "1px solid red";
+  }
 });
+
 
 let detect = (input, index, msg) => {
   if (input.value.trim() === "") {
