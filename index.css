@@ -195,7 +195,30 @@ button{
     font-size: 14px;
     font-weight: 500;
  }
+ .confimation{
+  display: none;
+ }
+.inf{
+  align-items: center;
+  text-align: center;
+}
+.inf i{
+ font-size: 50px;
+   background: linear-gradient(45deg, hsl(278, 68%, 11%),hsl(270, 55%, 56%) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
+}
+.inf h1{
+  font-size: 22px;
+   font-family: 'Space Mono', monospace;
+   color: hsl(278, 68%, 11%);
+}
+.inf h2{
+  font-size: 16px;
+  color: hsl(300, 1%, 71%);
+   font-family: 'Space Mono', monospace;
+}
   @media(max-width:372px){
 
  }
