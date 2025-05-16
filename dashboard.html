@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBook</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MyBook</div>
+        <div class="profile">
+            <div class="profile-icon">
+                <img id="profile-img" src="/api/placeholder/100/100" alt="Profile">
+            </div>
+            <div class="username" id="username">John Doe</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="sidebar">
+            <ul class="tabs">
+                <li class="tab active" data-tab="dashboard">Dashboard</li>
+                <li class="tab" data-tab="wallet">Wallet</li>
+                <li class="tab" data-tab="transactions">Transactions</li>
+                <li class="tab" data-tab="pay-bill">Pay Bill</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="tab-content active" id="dashboard">
+                <h1>Welcome, <span id="dashboard-username">John Doe</span></h1>
+                <div class="dashboard-container">
+                    <div class="graph-container">
+                        <h3>Transaction History</h3>
+                        <div class="graph">
+                            <canvas id="transaction-graph"></canvas>
+                        </div>
+                    </div>
+                    <div class="recent-transactions">
+                        <h3>Recent Transactions</h3>
+                        <div class="transaction-list">
+                            <div class="transaction-item">
+                                <div class="transaction-date">15 May 2025</div>
+                                <div class="transaction-details">
+                                    <div class="transaction-name">Coffee Shop</div>
+                                    <div class="transaction-amount withdrawal">-$4.50</div>
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-date">14 May 2025</div>
+                                <div class="transaction-details">
+                                    <div class="transaction-name">Salary</div>
+                                    <div class="transaction-amount deposit">+$2,500.00</div>
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-date">12 May 2025</div>
+                                <div class="transaction-details">
+                                    <div class="transaction-name">Grocery Store</div>
+                                    <div class="transaction-amount withdrawal">-$76.25</div>
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-date">10 May 2025</div>
+                                <div class="transaction-details">
+                                    <div class="transaction-name">Gas Station</div>
+                                    <div class="transaction-amount withdrawal">-$45.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="wallet">
+                <h2>My Wallet</h2>
+                <div class="balance">
+                    <h3>Current Balance</h3>
+                    <div class="balance-amount">$3,245.75</div>
+                </div>
+                <div class="card-container">
+                    <div class="card-front">
+                        <div class="card-chip"></div>
+                        <div class="card-number">**** **** **** 1234</div>
+                        <div class="card-details">
+                            <div class="card-name">John Doe</div>
+                            <div class="card-expiry">05/28</div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-stripe"></div>
+                        <div class="card-cvv">***</div>
+                        <div class="card-signature"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="transactions">
+                <h2>All Transactions</h2>
+                <table class="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15 May 2025</td>
+                            <td>Coffee Shop</td>
+                            <td class="withdrawal">-$4.50</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>14 May 2025</td>
+                            <td>Salary</td>
+                            <td class="deposit">+$2,500.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>12 May 2025</td>
+                            <td>Grocery Store</td>
+                            <td class="withdrawal">-$76.25</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>10 May 2025</td>
+                            <td>Gas Station</td>
+                            <td class="withdrawal">-$45.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>08 May 2025</td>
+                            <td>Phone Bill</td>
+                            <td class="withdrawal">-$65.99</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>05 May 2025</td>
+                            <td>Online Transfer to Jane</td>
+                            <td class="withdrawal">-$120.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>03 May 2025</td>
+                            <td>Restaurant</td>
+                            <td class="withdrawal">-$58.75</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>01 May 2025</td>
+                            <td>Freelance Payment</td>
+                            <td class="deposit">+$450.00</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-content" id="pay-bill">
+                <h2>Pay Bill</h2>
+                <div class="payment-form">
+                    <div class="payment-methods">
+                        <div class="payment-method active" data-method="manual">Manual Entry</div>
+                        <div class="payment-method" data-method="scan">Scan QR Code</div>
+                    </div>
+                    
+                    <div class="payment-content active" id="manual-payment">
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="receiver">Receiver's Account Number</label>
+                                <input type="text" id="receiver" name="receiver" placeholder="Enter account number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="receiver-name">Receiver's Name</label>
+                                <input type="text" id="receiver-name" name="receiver-name" placeholder="Enter receiver's name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <input type="number" id="amount" name="amount" placeholder="Enter amount" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" id="description" name="description" placeholder="Enter payment description">
+                            </div>
+                            <button type="submit" class="payment-submit">Pay Now</button>
+                        </form>
+                    </div>
+                    
+                    <div class="payment-content" id="scan-payment">
+                        <div class="qr-scanner">
+                            <div class="scanner-placeholder">
+                                <img src="/api/placeholder/300/300" alt="QR Scanner">
+                                <p>Camera not available in preview</p>
+                            </div>
+                            <button class="scan-button">Scan QR Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</body>
+</html>

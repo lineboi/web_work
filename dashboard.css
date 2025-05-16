@@ -1,0 +1,506 @@
+* Main Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #e0e0e0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4a6cf7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.sidebar {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    padding: 2rem 0;
+}
+
+.content {
+    width: 80%;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Tab Styles */
+.tabs {
+    list-style: none;
+}
+
+.tab {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    color: #e0e0e0;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab.active {
+    background-color: rgba(74, 108, 247, 0.3);
+    border-left-color: #4a6cf7;
+    color: #4a6cf7;
+    font-weight: 600;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.graph-container {
+    flex: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.graph {
+    margin-top: 1rem;
+    height: 300px;
+}
+
+.recent-transactions {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.transaction-list {
+    margin-top: 1rem;
+}
+
+.transaction-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.transaction-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction-amount {
+    font-weight: 600;
+}
+
+.withdrawal {
+    color: #f44336;
+}
+
+.deposit {
+    color: #4caf50;
+}
+
+/* Wallet Styles */
+.balance {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+}
+
+.balance-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-top: 0.5rem;
+}
+
+.card-container {
+    display: flex;
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s;
+}
+
+.card-front {
+    background: linear-gradient(45deg, #4a6cf7, #6a8eff);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-chip {
+    width: 40px;
+    height: 30px;
+    background-color: #ffc107;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.card-number {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-stripe {
+    height: 40px;
+    background-color: #444;
+    margin: 1rem -1.5rem;
+}
+
+.card-cvv {
+    background-color: #fff;
+    color: #333;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-top: 1rem;
+}
+
+.card-signature {
+    background-color: #f5f5f5;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Transactions Styles */
+.transactions-table {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.transactions-table th,
+.transactions-table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.transactions-table th {
+    background-color: rgba(74, 108, 247, 0.2);
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.transactions-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.status {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status.completed {
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+.status.pending {
+    background-color: #fff8e1;
+    color: #ffc107;
+}
+
+.status.failed {
+    background-color: #ffebee;
+    color: #f44336;
+}
+
+/* Pay Bill Styles */
+.payment-form {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 1.5rem;
+}
+
+.payment-methods {
+    display: flex;
+    border-bottom: 1px solid #444;
+}
+
+.payment-method {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-method:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.payment-method.active {
+    background-color: rgba(74, 108, 247, 0.3);
+    color: #4a6cf7;
+    font-weight: 600;
+}
+
+.payment-content {
+    display: none;
+    padding: 2rem;
+}
+
+.payment-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.payment-submit {
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-submit:hover {
+    background-color: #3a5de7;
+}
+
+.qr-scanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.scanner-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #444;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.scanner-placeholder p {
+    margin-top: 1rem;
+    color: #aaa;
+}
+
+.scan-button {
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+    
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .tabs {
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .tab {
+        padding: 1rem;
+        flex-shrink: 0;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .tab.active {
+        border-left: none;
+        border-bottom: 4px solid #4a6cf7;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .card-front, .card-back {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .transactions-table {
+        font-size: 0.9rem;
+    }
+    
+    .transactions-table th,
+    .transactions-table td {
+        padding: 0.5rem;
+    }
+    
+    .payment-methods {
+        flex-direction: column;
+    }
+    
+    .payment-method {
+        border-bottom: 1px solid #444;
+    }
+    
+    .payment-content {
+        padding: 1rem;
+    }
+    
+    .scanner-placeholder {
+        width: 100%;
+        height: 250px;
+    }
+}

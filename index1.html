@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBook</title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">MyBook</div>
+        <div class="profile-section" onclick="toggleProfileMenu()">
+            <img src="profile-placeholder.png" alt="Profile" class="profile-icon">
+            <span class="profile-name">John Doe</span>
+            <div class="profile-menu" id="profileMenu">
+                <div onclick="uploadImage()">Upload Image</div>
+                <div onclick="editProfile()">Edit Profile</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <button class="tab-btn active" onclick="openTab('dashboard')">Dashboard</button>
+            <button class="tab-btn" onclick="openTab('wallet')">Wallet</button>
+            <button class="tab-btn" onclick="openTab('transactions')">Transactions</button>
+            <button class="tab-btn" onclick="openTab('paybill')">Pay Bill</button>
+        </div>
+
+        <div class="main-content">
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="tab-content active">
+                <h1>Welcome John Doe</h1>
+                <div class="dashboard-grid">
+                    <div class="chart">Transaction Chart (Placeholder)</div>
+                    <div class="recent-transactions">
+                        <h3>Recent Transactions</h3>
+                        <!-- Add transaction list -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wallet Tab -->
+            <div id="wallet" class="tab-content">
+                <div class="balance">Balance: $5,000</div>
+                <div class="card-design">
+                    <div class="card-front">**** **** **** 1234</div>
+                    <div class="card-back"></div>
+                </div>
+            </div>
+
+            <!-- Transactions Tab -->
+            <div id="transactions" class="tab-content">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                    <!-- Add table rows -->
+                </table>
+            </div>
+
+            <!-- Pay Bill Tab -->
+            <div id="paybill" class="tab-content">
+                <form>
+                    <input type="text" placeholder="Receiver's Number">
+                    <input type="text" placeholder="Amount">
+                    <input type="text" placeholder="Description">
+                    <div class="qr-scanner">QR Scanner Placeholder</div>
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
