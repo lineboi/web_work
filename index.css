@@ -15,6 +15,56 @@
         max-width: 1440px;
       }
       
+
+
+@media (max-width:400px) {
+  .main{
+    display: block;
+  }
+  
+  .primary{
+    width: 30%;
+    margin-top: 20px;
+ }
+ .primary img{
+  margin: 20px;
+  width: 370px;
+  height: 210px;
+  }
+ .primary input:active {
+   background:  linear-gradient(to bottom, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+   }
+
+   .primary input:invalid {
+    border-color: hsl(0, 100%, 66%);
+   }
+  #back {
+  position: relative; 
+  z-index: 1;
+  left: 100px;
+}
+
+#font {
+  position: absolute;
+  top: 100px; 
+  left: 50px; 
+  z-index: 2; 
+  color: white;  
+}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width : 768px) {
 .main{
   display: flex;
   
@@ -30,7 +80,7 @@
   height: 210px;
 }
 .primary input:active {
-  linear-gradient(to bottom, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+ background:  linear-gradient(to bottom, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
 }
 
 .primary input:invalid {
@@ -174,7 +224,7 @@ button{
     width: 50%;
 }
 .exp {
-    flex: 1; /* takes available space */
+    flex: 1; 
     display: flex;
     justify-content: flex-end;
     margin-left: 160px;
@@ -219,6 +269,9 @@ button{
   color: hsl(300, 1%, 71%);
    font-family: 'Space Mono', monospace;
 }
-  @media(max-width:372px){
 
- }
+
+
+}
+  
+
